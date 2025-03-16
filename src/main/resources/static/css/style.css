@@ -1,0 +1,98 @@
+/* * GENERAL */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.page-title {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+/* * FRAGMENT */
+/* header */
+.header-container {
+  background-color: #fdce92;
+  height: 6rem;
+  position: sticky;
+  top: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 2rem;
+}
+
+.header-img-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-img-container img {
+  height: 90%;
+}
+
+.nav-link ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-link li {
+  cursor: pointer;
+  list-style: none;
+
+  margin: 0 1rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.nav-link a {
+  color: black;
+  text-decoration: none;
+}
+
+/* CARD */
+.card {
+  width: 10rem;
+  border: 1px solid gray;
+  border-radius: 10px;
+
+  text-align: center;
+}
+
+.card-padding {
+  padding: 1rem;
+}
+
+.card h3 {
+  margin: 1rem;
+}
+
+.card-img img {
+  max-height: 100%;
+  max-width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+/* * INDEX */
+.no-pizzas-container {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.no-pizzas {
+  font-size: 2rem;
+  font-weight: bold;
+  color: lightgray;
+}
+
+.card-layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

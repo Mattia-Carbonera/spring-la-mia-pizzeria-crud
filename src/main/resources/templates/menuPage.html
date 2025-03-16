@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS -->
+    <link th:rel="stylesheet" th:href="@{/css/style.css}" />
+    <title>Menù</title>
+  </head>
+  <body>
+    <th:block th:replace="fragments/header :: header"></th:block>
+
+    <main>
+      <div class="page-title">
+        <h1>Menù</h1>
+      </div>
+
+      <div class="card-layout">
+        <div
+          th:if="${pizzas.size() > 0}"
+          class="card-container"
+          th:each="pizza : ${pizzas}"
+          th:object="${pizza}"
+        >
+          <th:block
+            th:replace="~{fragments/card :: pizzasCard(${pizza})}"
+          ></th:block>
+        </div>
+      </div>
+
+      <div class="no-pizzas-container">
+        <h2 th:unless="${pizzas.size() > 0}" class="no-pizzas">
+          Nessuna pizza disponibile
+        </h2>
+      </div>
+    </main>
+
+    <footer>
+      <span>footer</span>
+    </footer>
+  </body>
+</html>
