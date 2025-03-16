@@ -57,16 +57,27 @@
 }
 
 /* CARD */
+.card-container {
+  flex-grow: 1;
+}
+
 .card {
   width: 10rem;
+  height: 100%;
   border: 1px solid gray;
   border-radius: 10px;
 
   text-align: center;
 }
 
+.card a {
+  text-decoration: none;
+  color: black;
+}
+
 .card-padding {
   padding: 1rem;
+  height: 100%;
 }
 
 .card h3 {
@@ -93,6 +104,9 @@
 
 .card-layout {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
+  flex-wrap: wrap;
+  align-items: stretch;
+  align-content: center;
 }
