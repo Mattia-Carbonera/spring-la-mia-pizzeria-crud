@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS -->
+    <link th:rel="stylesheet" th:href="@{/css/style.css}" />
+    <title>Pizza</title>
+  </head>
+  <body>
+    <th:block th:replace="fragments/header :: header"></th:block>
+
+    <main>
+      <div class="page-title">
+        <h1>Pizza [[${pizza}]]</h1>
+      </div>
+
+      <div class="show-page-container">
+        <div class="show-img-container">
+          <img th:src="${pizza.getImage()}" alt="" />
+        </div>
+
+        <div class="show-page-content">
+          <!-- <h2>[[${pizza}]]</h2> -->
+          <div class="ingredients">
+            <span class="pizza-bold">Ingredienti: </span>
+            <p>[[${pizza.getDescription()}]]</p>
+          </div>
+          <div class="price">
+            <span class="pizza-bold">[[${pizza.getPrice()}]]</span>
+            <span class="pizza-bold"> €</span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <span>footer</span>
+    </footer>
+  </body>
+</html>

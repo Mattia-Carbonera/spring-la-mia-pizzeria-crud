@@ -1,8 +1,8 @@
 <div class="card-padding" th:fragment="pizzasCard(item)">
   <div class="card">
-    <a href="">
+    <a th:href="@{http://localhost:8080/menu/} + ${item.getId()}">
       <div class="card-img">
-        <img th:src="@{/img/pizza-logo.jpg}" alt="" />
+        <img th:src="${pizza.getImage()}" alt="" />
       </div>
 
       <div class="card-body">

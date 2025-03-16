@@ -11,6 +11,11 @@
   margin: 2rem 0;
 }
 
+.pizza-bold {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
 /* * FRAGMENT */
 /* header */
 .header-container {
@@ -87,8 +92,10 @@
 .card-img img {
   max-height: 100%;
   max-width: 100%;
-  border-radius: 10px 10px 0 0;
+  border-radius: 7px 7px 0 0;
 }
+
+/* * HOME */
 
 /* * INDEX */
 .no-pizzas-container {
@@ -109,4 +116,33 @@
   flex-wrap: wrap;
   align-items: stretch;
   align-content: center;
+  padding: 0 5rem;
 }
+
+/* * SHOW */
+.show-img-container {
+  display: flex;
+  justify-content: center;
+}
+
+.show-img-container img {
+  border-radius: 15px;
+  max-width: 50%;
+}
+
+.show-page-content * {
+  margin: 1rem 0;
+}
+
+.show-page-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  margin: auto;
+}
+
+/* .show-page-content h2 {
+  font-size: 2rem;
+} */
