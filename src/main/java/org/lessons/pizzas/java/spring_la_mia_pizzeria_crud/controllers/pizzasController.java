@@ -20,12 +20,14 @@ public class pizzasController {
     @Autowired
     public pizzaRepository repository;
 
+    // homePage
     @GetMapping("/")
     public String homePage() {
         return new String("index");
     }
     
     
+    // index
     @GetMapping("/menu")
     public String index(Model model) {
         List<Pizza> pizzas = repository.findAll();
@@ -35,6 +37,7 @@ public class pizzasController {
         return new String("menuPage");
     }
 
+    // show
     @GetMapping("/menu/{id}")
     public String show(@PathVariable Integer id, Model model) {
         Pizza selectedPizza = repository.findById(id).get();
@@ -43,11 +46,11 @@ public class pizzasController {
         return new String("pizzaShow");
     }
 
+    // search
     @GetMapping("/menu/search")
-    public String searchPizza(@RequestParam String name, Model model) {
+    public String searchPizza(@RequestParam("name") String name, Model model) {
         List<Pizza> searchedPizza = repository.findByNameContainingIgnoreCase(name);
         model.addAttribute("pizzas", searchedPizza);
-        // http://localhost:8080/menu/search?name=Margherita
 
         return new String("menuPage");
     }

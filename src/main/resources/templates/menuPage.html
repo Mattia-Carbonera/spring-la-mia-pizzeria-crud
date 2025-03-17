@@ -37,10 +37,12 @@
       <div id="search" class="">
         <img th:src="@{/img/prova.webp}" th:alt="Search" />
       </div>
-      <div id="modal" class="d-none">
-        <input type="text" />
-        <button>Vai</button>
-      </div>
+
+      <!-- ? ??? -->
+      <form id="modal" class="d-none" th:action="@{/menu/search}" method="get">
+        <input type="text" name="name" />
+        <button type="submit">Vai</button>
+      </form>
     </main>
 
     <footer>

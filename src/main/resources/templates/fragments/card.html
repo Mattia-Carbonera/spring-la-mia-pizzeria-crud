@@ -2,7 +2,8 @@
   <div class="card">
     <a th:href="@{http://localhost:8080/menu/} + ${item.getId()}">
       <div class="card-img">
-        <img th:src="@{/img/} + ${pizza.getImage()}" alt="" />
+        <!-- <img th:src="@{/img/} + ${pizza.getImage()}" alt="" /> -->
+        <img th:src="@{/img/pizza.jpg}" alt="" />
       </div>
 
       <div class="card-body">
