@@ -33,6 +33,14 @@
           Nessuna pizza disponibile
         </h2>
       </div>
+
+      <div id="search" class="">
+        <img th:src="@{/img/prova.webp}" th:alt="Search" />
+      </div>
+      <div id="modal" class="d-none">
+        <input type="text" />
+        <button>Vai</button>
+      </div>
     </main>
 
     <footer>
@@ -40,3 +48,21 @@
     </footer>
   </body>
 </html>
+
+<!-- ! SCRIPT -->
+<script th:inline="javascript">
+  let btn = document.getElementById("search");
+  let modal = document.getElementById("modal");
+
+  let modalIsOpen = false;
+
+  btn.addEventListener("click", (e) => {
+    if (modalIsOpen == false) {
+      modal.className = "open";
+      modalIsOpen = true;
+    } else {
+      modal.className = "d-none";
+      modalIsOpen = false;
+    }
+  });
+</script>

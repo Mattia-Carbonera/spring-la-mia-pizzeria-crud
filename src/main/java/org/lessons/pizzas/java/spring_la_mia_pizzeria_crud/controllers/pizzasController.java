@@ -30,6 +30,8 @@ public class pizzasController {
     public String index(Model model) {
         List<Pizza> pizzas = repository.findAll();
         model.addAttribute("pizzas", pizzas);
+        model.addAttribute("modal", false);
+
         return new String("menuPage");
     }
 
@@ -37,8 +39,19 @@ public class pizzasController {
     public String show(@PathVariable Integer id, Model model) {
         Pizza selectedPizza = repository.findById(id).get();
         model.addAttribute("pizza", selectedPizza);
+
         return new String("pizzaShow");
     }
+
+    @GetMapping("/menu/search")
+    public String searchPizza(@RequestParam String name, Model model) {
+        List<Pizza> searchedPizza = repository.findByNameContainingIgnoreCase(name);
+        model.addAttribute("pizzas", searchedPizza);
+        // http://localhost:8080/menu/search?name=Margherita
+
+        return new String("menuPage");
+    }
+    
     
     
 }
