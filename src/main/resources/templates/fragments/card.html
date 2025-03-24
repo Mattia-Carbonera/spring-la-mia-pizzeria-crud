@@ -3,12 +3,12 @@
     <a th:href="@{http://localhost:8080/menu/} + ${item.id}">
       <div class="card-img">
         <img
-          th:if="${item.image.length > 0}"
+          th:if="${item.image.length() > 0}"
           th:src="@{/img/pizze-img/} + ${item.image}"
           alt=""
         />
         <img
-          th:unless="${item.image.length > 0}"
+          th:unless="${item.image.length() > 0}"
           th:src="@{/img/placeholder-img.jpg}"
           alt=""
         />

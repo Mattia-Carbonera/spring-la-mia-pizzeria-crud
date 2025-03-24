@@ -17,7 +17,7 @@
       <div class="show-page-container">
         <div class="show-img-container">
           <img
-            th:if="${pizza.image.length > 0}"
+            th:if="${pizza.image.length() > 0}"
             th:src="@{/img/pizze-img/} + ${pizza.image}"
             alt=""
           />

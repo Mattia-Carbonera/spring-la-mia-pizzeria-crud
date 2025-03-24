@@ -81,15 +81,11 @@
   let btn = document.getElementById("search");
   let modal = document.getElementById("modal");
 
-  let modalIsOpen = false;
-
   btn.addEventListener("click", (e) => {
-    if (modalIsOpen == false) {
+    if (modal.className.includes("d-none")) {
       modal.className = "open";
-      modalIsOpen = true;
     } else {
       modal.className = "d-none";
-      modalIsOpen = false;
     }
   });
 </script>

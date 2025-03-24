@@ -42,7 +42,7 @@
 
         <div class="form-pizza form-pizza-image">
           <label for="image">Immagine: </label>
-          <input type="text" id="image" th:field="*{image}" />
+          <input type="text" id="image" th:field="*{image}" value="null" />
         </div>
         <div th:if="${#fields.hasErrors('image')}" class="error">
           <ul>
