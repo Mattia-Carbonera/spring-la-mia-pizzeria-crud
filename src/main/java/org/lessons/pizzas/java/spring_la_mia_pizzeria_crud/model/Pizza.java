@@ -30,7 +30,7 @@ public class Pizza {
     String image;
     
     @Min(value = 0, message = "The price of pizza can't be negative")
-    @NotNull
+    @NotNull(message = "The price of pizza can't be null")
     BigDecimal price;
 
 

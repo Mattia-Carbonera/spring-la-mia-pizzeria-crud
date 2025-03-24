@@ -16,8 +16,18 @@
       </div>
       <div class="show-page-container">
         <div class="show-img-container">
-          <!-- <img th:src="@{/img/} + ${pizza.getImage()}" alt="" /> -->
-          <img th:src="@{/img/pizza.jpg}" alt="" />
+          <img
+            th:if="${pizza.image.length > 0}"
+            th:src="@{/img/pizze-img/} + ${pizza.image}"
+            alt=""
+          />
+
+          <img
+            th:unless="${pizza.image.length > 0}"
+            th:src="@{/img/placeholder-img.jpg}"
+            alt=""
+          />
+          <!-- <img th:src="@{/img/pizza.jpg}" alt="" /> -->
         </div>
 
         <div class="show-page-content">
