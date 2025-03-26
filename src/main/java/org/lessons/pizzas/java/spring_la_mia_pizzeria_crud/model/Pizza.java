@@ -64,7 +64,11 @@ public class Pizza {
     }
 
     public void setImage(String image) {
-        this.image = image;
+        if(image.length() > 0) {
+            this.image = image;
+        } else {
+            this.image = null;
+        }
     }
 
     public BigDecimal getPrice() {

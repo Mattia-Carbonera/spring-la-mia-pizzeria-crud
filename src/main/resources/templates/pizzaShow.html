@@ -17,21 +17,19 @@
       <div class="show-page-container">
         <div class="show-img-container">
           <img
-            th:if="${pizza.image.length() > 0}"
+            th:if="${pizza.image != null}"
             th:src="@{/img/pizze-img/} + ${pizza.image}"
             alt=""
           />
 
           <img
-            th:unless="${pizza.image.length > 0}"
+            th:unless="${pizza.image != null}"
             th:src="@{/img/placeholder-img.jpg}"
             alt=""
           />
-          <!-- <img th:src="@{/img/pizza.jpg}" alt="" /> -->
         </div>
 
         <div class="show-page-content">
-          <!-- <h2>[[${pizza}]]</h2> -->
           <div class="ingredients">
             <span class="pizza-bold">Ingredienti: </span>
             <p>[[${pizza.getDescription()}]]</p>
@@ -43,9 +41,5 @@
         </div>
       </div>
     </main>
-
-    <footer>
-      <span>footer</span>
-    </footer>
   </body>
 </html>
